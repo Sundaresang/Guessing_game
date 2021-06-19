@@ -9,6 +9,7 @@ do
 done
 actual=$(ls | wc -w)
 # echo $actual
+function guess_game() {
 while [[ $guess -ne $actual ]]
 do
 	if [[ $guess -gt $actual ]]
@@ -21,4 +22,6 @@ do
 	fi
 done
 echo "Congrats you have guessed the right value $actual"
+}
+guess_game
 
